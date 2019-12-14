@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/canyener/expensify.git",
   "author": "canadaslar <can@adaslar.co.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.41.2"
+  }
 }
