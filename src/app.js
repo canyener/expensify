@@ -1,9 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
-const template = <p>This is jsx from webpack</p>
+const ExpenseDashboardPage = () => (
+  <div>
+    This is from my dashboard component
+  </div>
+)
 
-ReactDOM.render(template, document.getElementById('root'))
+const routes = (
+  <BrowserRouter>
+    <Route path="/" component={ExpenseDashboardPage} />
+  </BrowserRouter>
+)
+
+ReactDOM.render(routes, document.getElementById('root'))
