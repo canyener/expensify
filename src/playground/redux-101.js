@@ -12,6 +12,15 @@ const decrementCount = ( { decrementBy = 1 } = {}) =>({
   decrementBy
 })
 
+const setCount = ({ count }) => ({
+  type: 'SET',
+  count
+})
+
+const resetCount = () => ({
+  type: 'RESET'
+})
+
 const store = createStore((state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
@@ -39,26 +48,14 @@ const unsubscribe = store.subscribe(() => {
   console.log(store.getState())
 })
 
-// store.dispatch({
-//   type: 'INCREMENT',
-//   incrementBy: 5
-// })
-
 store.dispatch(incrementCount({ incrementBy: 5 }))
-
-//unsubscribe()
 
 store.dispatch(incrementCount())
 
-store.dispatch({
-  type: 'RESET'
-})
+store.dispatch(resetCount())
 
 store.dispatch(decrementCount())
 
 store.dispatch(decrementCount({ decrementBy: 10 }))
 
-store.dispatch({
-  type: 'SET',
-  count: 101
-})
+store.dispatch(setCount({ count: 101 }))
