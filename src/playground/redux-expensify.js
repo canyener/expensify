@@ -10,7 +10,6 @@ import { createStore, combineReducers } from 'redux'
 // SET_END_DATE
 
 //Expenses Reducer
-
 const expensesReducerDefaultState = []
 
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
@@ -20,11 +19,26 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
   }
 }
 
-// Store creation
+//Filters Reducer
+const filtersReducerDefaultState = {
+  text: '',
+  sortBy: 'date',
+  startDate: undefined,
+  endDate: undefined
+}
 
+const filtersReducer = (state = filtersReducerDefaultState, action) => {
+  switch(action.type) {
+    default:
+      return state
+  }
+}
+
+// Store creation
 const store = createStore(
   combineReducers({
-    expenses: expensesReducer
+    expenses: expensesReducer,
+    filters: filtersReducer
   })
 )
 
