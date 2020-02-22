@@ -94,3 +94,14 @@ const demoState = {
     endDate: undefined
   }
 }
+
+// const user = {
+//   name: 'Can',
+//   age: 11
+// }
+
+// console.log({
+//   ...user,
+//   location: 'Istanbul',
+//   age: 22 //overrides user age
+// })
