@@ -37,14 +37,12 @@ const setTextFilter = (text = '') => ({
   text
 }) 
 // SORT_BY_DATE
-const sortByDate = (sortBy = 'date') => ({
-  type: 'SORT_BY_DATE',
-  sortBy
+const sortByDate = () => ({
+  type: 'SORT_BY_DATE'
 })
 // SORT_BY_AMOUNT
-const sortByAmount = (sortBy = 'amount') => ({
-  type: 'SORT_BY_AMOUNT',
-  sortBy
+const sortByAmount = () => ({
+  type: 'SORT_BY_AMOUNT'
 })
 // SET_START_DATE
 // SET_END_DATE
@@ -95,12 +93,12 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
     case 'SORT_BY_DATE':
       return {
         ...state,
-        sortBy: action.sortBy
+        sortBy: 'date'
       }
     case 'SORT_BY_AMOUNT':
       return {
         ...state,
-        sortBy: action.sortBy
+        sortBy: 'amount'
       }
     default:
       return state
