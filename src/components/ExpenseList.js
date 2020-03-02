@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+
 import ExpenseListItem from './ExpenseListItem'
 
 const ExpenseList = (props) => (
@@ -7,9 +8,7 @@ const ExpenseList = (props) => (
     <h1>Expense List</h1>
     {props.expenses.map(expense => <ExpenseListItem 
         key={expense.id} 
-        description={expense.description} 
-        amount={expense.amount} 
-        createdAt={expense.createdAt} 
+        {...expense}
       /> 
     )}
   </div>
