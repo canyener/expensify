@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const EditExpensePage = (props) => {
   console.log(props)
@@ -9,6 +10,10 @@ const EditExpensePage = (props) => {
   )
 }
 
+const mapStateToProps = (state, props) => {
+  return {
+    expense: state.expenses.find(expense => expense.id === props.match.params.id)
+  }
+}
 
-
-export default EditExpensePage
+export default connect(mapStateToProps)(EditExpensePage)
