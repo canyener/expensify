@@ -50,9 +50,9 @@ test('Should filter by endDate', () => {
     text: '',
     sortBy: 'date',
     startDate: undefined,
-    endDate: moment(100)
+    endDate: moment(0).add(2, 'days')
   }
-  
+
   const actualResult = selectExpenses(expenses, filters)
   expect(actualResult).toEqual([expenses[0], expenses[1]])
 })
