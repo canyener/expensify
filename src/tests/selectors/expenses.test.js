@@ -44,3 +44,14 @@ test('Should filter by startDate', () => {
   const actualResult = selectExpenses(expenses, filters)
   expect(actualResult).toEqual([expenses[2], expenses[0]])
 })
+
+test('Should filter by endDate', () => {
+  const filters = {
+    text: '',
+    sortBy: 'date',
+    startDate: undefined,
+    endDate: moment(100)
+  }
+  const actualResult = selectExpenses(expenses, filters)
+  expect(actualResult).toEqual([expenses[0], expenses[1]])
+})
