@@ -6,7 +6,8 @@
   "author": "canadaslar <can@adaslar.co.uk>",
   "license": "MIT",
   "scripts": {
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.7.7",
@@ -15,6 +16,7 @@
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.0",
+    "jest": "^25.1.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
