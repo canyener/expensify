@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/canyener/expensify/workflows/Node.js%20CI/badge.svg?branch=master)
+
 # expensify
 A simple React application to manage expenses to use more advanced features of React such as authentication, routing, testing and deploying.
 
