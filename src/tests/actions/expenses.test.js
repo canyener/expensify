@@ -19,3 +19,36 @@ test('Should setup edit expense action object', () => {
     }
   })
 })
+
+test('Should setup add expense action object with provided values', () => {
+  const expenseData = {
+    description: 'test description',
+    amount: 109500,
+    createdAt: 1000,
+    note: 'test note'
+  }
+  const actualAction = addExpense(expenseData)
+
+  expect(actualAction).toEqual({
+    type: 'ADD_EXPENSE',
+    expense: {
+      ...expenseData,
+      id: expect.any(String)
+    }
+  })
+})
+
+test('Should setup add expense action object with default values', () => {
+  const actualAction = addExpense()
+
+  expect(actualAction).toEqual({
+    type: 'ADD_EXPENSE',
+    expense: {     
+      id: expect.any(String),
+      description: '',
+      amount: 0,
+      createdAt: 0,
+      note: ''
+    }
+  })
+})
