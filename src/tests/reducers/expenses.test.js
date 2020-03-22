@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 import expensesReducer from '../../reducers/expenses'
 import expenses from '../fixtures/expenses'
 
@@ -50,7 +48,7 @@ test('Should edit expense', () => {
     description: 'updated expense description',
     note: 'updated expense note',
     amount: 111,
-    createdAt: moment(100).valueOf()
+    createdAt: 1000
   }
   const action = {
     type: 'EDIT_EXPENSE',
