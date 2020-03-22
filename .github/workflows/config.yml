@@ -26,6 +26,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install -g yarn
       - run: yarn install
+        env:
+          CI: true
   test:
     name: Tests
     runs-on: ubuntu-latest
