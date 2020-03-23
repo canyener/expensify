@@ -19,6 +19,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^25.1.0",
+    "jest-enzyme": "^7.1.2",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "raf": "^3.4.1",
