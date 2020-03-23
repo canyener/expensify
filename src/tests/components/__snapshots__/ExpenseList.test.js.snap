@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render ExpenseList with empty message 1`] = `
+exports[`Should render ExpenseList with empty expense array 1`] = `
 <div>
   <p>
     No expenses
