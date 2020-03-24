@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render ExpenseForm correctly 1`] = `
+exports[`Should render ExpenseForm correctly with NO expense data 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -25,7 +25,7 @@ exports[`Should render ExpenseForm correctly 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date={"2020-03-24T15:23:13.158Z"}
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
