@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import moment from 'moment'
 
 import ExpenseForm  from '../../components/ExpenseForm'
 import expenses from '../fixtures/expenses'
@@ -78,6 +79,7 @@ test('Should call onSubmit prop for valid form submission', () => {
   wrapper.find('form').simulate('submit', {
     preventDefault: () => {}
   })
+
   expect(wrapper.state('error')).toBe('')
   expect(onSubmitSpy).toHaveBeenLastCalledWith({
     description: expenses[0].description,
@@ -85,4 +87,12 @@ test('Should call onSubmit prop for valid form submission', () => {
     note: expenses[0].note,
     createdAt: expenses[0].createdAt
   })
+})
+
+test('Should set new date on date change', () => {
+  const now = moment()
+  const wrapper = shallow(<ExpenseForm />)
+
+  wrapper.find('withStyles(SingleDatePicker)').prop('onDateChange')(now)
+  expect(wrapper.state('createdAt')).toEqual(now)
 })
