@@ -16,7 +16,7 @@ exports[`Should render ExpenseList with expenses 1`] = `
     description="Gum"
     id="1"
     key="1"
-    note=""
+    note="Test note for gum"
   />
   <ExpenseListItem
     amount={109500}
