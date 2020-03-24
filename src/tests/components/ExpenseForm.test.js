@@ -24,3 +24,13 @@ test('Should render error message for invalid form submission', () => {
   expect(wrapper.state('error')).toBe('Please provide description and amount.')
   expect(wrapper).toMatchSnapshot()
 })
+
+test('Should set description on input change', () => {
+  const value = 'New description'
+  const wrapper = shallow(<ExpenseForm />)
+  wrapper.find('input').at(0).simulate('change', {
+    target: { value }
+  })
+
+  expect(wrapper.state('description')).toBe(value)
+})
