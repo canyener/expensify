@@ -7,11 +7,11 @@ import ExpenseForm from './ExpenseForm'
 
 export class EditExpensePage extends React.Component {
   onSubmit = (expense) => {
-    this.props.dispatch(editExpense(this.props.expense.id, expense))
+    this.props.editExpense(this.props.expense.id, expense)
     this.props.history.push('/')
   }
   onRemove =() => {
-    this.props.dispatch(removeExpense({ id: this.props.expense.id }))
+    this.props.removeExpense({ id: this.props.expense.id })
     this.props.history.push('/')
   }
   render() {
@@ -37,4 +37,9 @@ const mapStateToProps = (state, props) => {
   }
 }
 
-export default connect(mapStateToProps)(EditExpensePage)
+const mapDispatchToProps = (dispatch) => ({
+  editExpense: (id, expense) => dispatch(editExpense(id, expense)),
+  removeExpense: (data) => dispatch(removeExpense(data))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage)
