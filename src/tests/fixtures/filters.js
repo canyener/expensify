@@ -15,6 +15,6 @@ const altfilters = {
 }
 
 export {
-  filters,
+  defaultFilters,
   altfilters
 }
