@@ -40,6 +40,7 @@ module.exports = (env) => {
       CSSExtract
     ],
     devtool: isProduction ? 'source-map' : 'inline-source-map',
+    performance: { hints: false },
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true,
