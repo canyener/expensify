@@ -6,6 +6,7 @@
   "author": "canadaslar <can@adaslar.co.uk>",
   "license": "MIT",
   "scripts": {
+    "start": "node server/server.js",
     "build:dev": "webpack --mode development",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
