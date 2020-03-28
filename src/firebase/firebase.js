@@ -14,6 +14,24 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 firebase.analytics()
 
-firebase.database().ref().set({
-  name: 'Can Yener'
+const database = firebase.database()
+
+database.ref().set({
+  name: 'Can Yener',
+  age: 35,
+  isSingle: true,
+  location: {
+    city: 'Istanbul',
+    country: 'Turkey'
+  }
+})
+
+//database.ref().set('This is test data')
+
+database.ref('age').set(36)
+database.ref('location/city').set('Tekirdag')
+
+database.ref('attributes').set({
+  height: 187,
+  weight: 100
 })
