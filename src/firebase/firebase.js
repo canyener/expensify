@@ -30,3 +30,8 @@ database.ref().set({
 
 database.ref('age').set(36)
 database.ref('location/city').set('Tekirdag')
+
+database.ref('attributes').set({
+  height: 187,
+  weight: 100
+})
