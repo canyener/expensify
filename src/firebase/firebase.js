@@ -19,10 +19,15 @@ const database = firebase.database()
 database.ref().set({
   name: 'Can Yener',
   age: 35,
+  job: {
+    title: 'Software Developer',
+    company: 'Google'
+  },
+  stressLevel: 6,
   isSingle: true,
   location: {
-    city: 'Istanbul',
-    country: 'Turkey'
+    city: 'Philadelphia',
+    country: 'United States'
   }
 }).then(() => {
   console.log('Data is saved')
@@ -30,7 +35,19 @@ database.ref().set({
   console.log('This failed', e)
 })
 
-database.ref('isSingle').set(null) //equivalent to remove
+database.ref().update({
+  stressLevel: 9,
+  'job/company': 'Amazon',
+  'location/city': 'Seattle'
+})
+
+
+// database.ref().update({
+//   job: 'Software Manager',
+//   'location/city': 'İzmir'
+// })
+
+//database.ref('isSingle').set(null) //equivalent to remove
 
 // database.ref('isSingle')
 //   .remove()
@@ -39,3 +56,14 @@ database.ref('isSingle').set(null) //equivalent to remove
 //   }).catch(e => {
 //     console.log('Remove failed', e)
 //   })
+
+// database.ref().update({
+//   name: 'Cem Yener',
+//   age: 29,
+//   job: 'Software Developer', // Adds new property
+//   isSingle: null //removes isSingle
+// }).then(() => {
+//   console.log('Data is updated')
+// }).catch(e => {
+//   console.log('Update failed', e)
+// })
