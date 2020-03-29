@@ -17,26 +17,41 @@ firebase.analytics()
 const database = firebase.database()
 
 
-//Fires whenever data changes
-const onValueChange = database.ref()
-  .on('value', (snapshot) => {
-    console.log(snapshot.val())
-  }, e => {
-    console.log('Error with data fetching', e)
-  })
+//Setting up a data sub
+// database.ref().on('value', (snapshot) => {
+//   const val = snapshot.val()
+//   console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`)
+// })
 
-setTimeout(() => {
-  database.ref('age').set(48)
-}, 3500);
-
-setTimeout(() => {
-  database.ref().off('value', onValueChange)
-}, 7000);
+// setTimeout(() => {
+//   database.ref('job/company').set('Amazon')
+// }, 2000);
 
 
-setTimeout(() => {
-  database.ref('age').set(45)
-}, 10500);
+// setTimeout(() => {
+//   database.ref('job/company').set('Google')
+// }, 2000);
+
+// //Fires whenever data changes
+// const onValueChange = database.ref()
+//   .on('value', (snapshot) => {
+//     console.log(snapshot.val())
+//   }, e => {
+//     console.log('Error with data fetching', e)
+//   })
+
+// setTimeout(() => {
+//   database.ref('age').set(48)
+// }, 3500);
+
+// setTimeout(() => {
+//   database.ref().off('value', onValueChange)
+// }, 7000);
+
+
+// setTimeout(() => {
+//   database.ref('age').set(45)
+// }, 10500);
 
 //Get data single time, if data changes we won't be notified
 // database.ref('location/city')
