@@ -16,6 +16,84 @@ firebase.analytics()
 
 const database = firebase.database()
 
+//child_added : Runs for existing ones and added ones
+database.ref('expenses')
+  .on('child_added', (snapshot) => {
+    console.log(snapshot.key, snapshot.val())
+  })
+
+//child_changed
+// database.ref('expenses')
+//   .on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+//   })
+
+//child_removed
+// database.ref('expenses')
+//   .on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+//   })
+
+
+// database.ref('expenses')
+//   .on('value', (snapshot) => {
+//     const expenses = []
+
+//     snapshot.forEach(childSnapshot => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val()
+//       })
+//     })
+
+//     console.log(expenses)
+//   })
+
+// database.ref('expenses')
+//   .once('value')
+//   .then(snapshot => {
+//     const expenses = []
+
+//     snapshot.forEach(childSnapshot => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val()
+//       })
+//     })
+
+//     console.log(expenses)
+//   })
+
+// database.ref('expenses').push({
+//   description: 'Gum',
+//   note: 'Test note for gum',
+//   amount: 195,
+//   createdAt: 0
+// })
+
+// database.ref('notes/-M3b8D7U6EcalLu_MB2q').update({
+//   body: 'Buy food'
+// })
+
+// database.ref('notes/-M3b8D7U6EcalLu_MB2q').remove()
+// database.ref('notes').push({
+//   title: 'Course Topics',
+//   body: 'React, React Native, Python'
+// })
+
+// const notes = [{
+//   id: '12',
+//   title: 'Fist note',
+//   body: 'This is my note'
+// }, {
+//   id: '761asd',
+//   title: 'Another note',
+//   body: 'This is my note'
+// }]
+
+// database.ref('notes').set(notes)
+
+// database.ref('notes/12')
 
 //Setting up a data sub
 // database.ref().on('value', (snapshot) => {
