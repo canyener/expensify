@@ -26,8 +26,8 @@ database.ref().set({
   stressLevel: 6,
   isSingle: true,
   location: {
-    city: 'Istanbul',
-    country: 'Turkey'
+    city: 'Philadelphia',
+    country: 'United States'
   }
 }).then(() => {
   console.log('Data is saved')
@@ -35,7 +35,11 @@ database.ref().set({
   console.log('This failed', e)
 })
 
-
+database.ref().update({
+  stressLevel: 9,
+  'job/company': 'Amazon',
+  'location/city': 'Seattle'
+})
 
 
 // database.ref().update({
