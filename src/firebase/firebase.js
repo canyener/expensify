@@ -35,12 +35,11 @@ database.ref().set({
   console.log('This failed', e)
 })
 
-database.ref().update({
-  stressLevel: 9,
-  'job/company': 'Amazon',
-  'location/city': 'Seattle'
-})
-
+// database.ref().update({
+//   stressLevel: 9,
+//   'job/company': 'Amazon',
+//   'location/city': 'Seattle'
+// })
 
 // database.ref().update({
 //   job: 'Software Manager',
