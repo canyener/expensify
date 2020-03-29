@@ -16,24 +16,56 @@ firebase.analytics()
 
 const database = firebase.database()
 
-database.ref().set({
-  name: 'Can Yener',
-  age: 35,
-  job: {
-    title: 'Software Developer',
-    company: 'Google'
-  },
-  stressLevel: 6,
-  isSingle: true,
-  location: {
-    city: 'Philadelphia',
-    country: 'United States'
-  }
-}).then(() => {
-  console.log('Data is saved')
-}).catch(e => {
-  console.log('This failed', e)
-})
+
+//Fires whenever data changes
+const onValueChange = database.ref()
+  .on('value', (snapshot) => {
+    console.log(snapshot.val())
+  }, e => {
+    console.log('Error with data fetching', e)
+  })
+
+setTimeout(() => {
+  database.ref('age').set(48)
+}, 3500);
+
+setTimeout(() => {
+  database.ref().off('value', onValueChange)
+}, 7000);
+
+
+setTimeout(() => {
+  database.ref('age').set(45)
+}, 10500);
+
+//Get data single time, if data changes we won't be notified
+// database.ref('location/city')
+//   .once('value')
+//   .then((snapshot) => {
+//     const val = snapshot.val()
+//     console.log(val)
+//   }).catch(e => {
+//     console.log('Error fetching data', e)
+//   })
+
+// database.ref().set({
+//   name: 'Can Yener',
+//   age: 35,
+//   job: {
+//     title: 'Software Developer',
+//     company: 'Google'
+//   },
+//   stressLevel: 6,
+//   isSingle: true,
+//   location: {
+//     city: 'Philadelphia',
+//     country: 'United States'
+//   }
+// }).then(() => {
+//   console.log('Data is saved')
+// }).catch(e => {
+//   console.log('This failed', e)
+// })
 
 // database.ref().update({
 //   stressLevel: 9,
