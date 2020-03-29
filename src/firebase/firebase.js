@@ -16,27 +16,27 @@ firebase.analytics()
 
 const database = firebase.database()
 
-database.ref('expenses').push({
-  description: 'Gum',
-  note: 'Test note for gum',
-  amount: 195,
-  createdAt: 0
-})
+database.ref('expenses')
+  .once('value')
+  .then(snapshot => {
+    const expenses = []
 
-database.ref('expenses').push({
-  description: 'Rent',
-  note: '',
-  amount: 109500,
-  createdAt: 123456
-})
+    snapshot.forEach(childSnapshot => {
+      expenses.push({
+        id: childSnapshot.key,
+        ...childSnapshot.val()
+      })
+    })
 
-database.ref('expenses').push({
-  description: 'Credit Card',
-  note: 'Credit card note',
-  amount: 4500,
-  createdAt: 654321
-})
+    console.log(expenses)
+  })
 
+// database.ref('expenses').push({
+//   description: 'Gum',
+//   note: 'Test note for gum',
+//   amount: 195,
+//   createdAt: 0
+// })
 
 // database.ref('notes/-M3b8D7U6EcalLu_MB2q').update({
 //   body: 'Buy food'
