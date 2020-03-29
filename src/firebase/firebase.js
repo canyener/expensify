@@ -29,3 +29,9 @@ const database = firebase.database()
 // }).catch(e => {
 //   console.log('This failed', e)
 // })
+
+database.ref('isSingle').remove().then(() => {
+  console.log('Data is removed')
+}).catch(e => {
+  console.log('Remove failed', e)
+})
