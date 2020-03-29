@@ -16,6 +16,51 @@ firebase.analytics()
 
 const database = firebase.database()
 
+database.ref('expenses').push({
+  description: 'Gum',
+  note: 'Test note for gum',
+  amount: 195,
+  createdAt: 0
+})
+
+database.ref('expenses').push({
+  description: 'Rent',
+  note: '',
+  amount: 109500,
+  createdAt: 123456
+})
+
+database.ref('expenses').push({
+  description: 'Credit Card',
+  note: 'Credit card note',
+  amount: 4500,
+  createdAt: 654321
+})
+
+
+// database.ref('notes/-M3b8D7U6EcalLu_MB2q').update({
+//   body: 'Buy food'
+// })
+
+// database.ref('notes/-M3b8D7U6EcalLu_MB2q').remove()
+// database.ref('notes').push({
+//   title: 'Course Topics',
+//   body: 'React, React Native, Python'
+// })
+
+// const notes = [{
+//   id: '12',
+//   title: 'Fist note',
+//   body: 'This is my note'
+// }, {
+//   id: '761asd',
+//   title: 'Another note',
+//   body: 'This is my note'
+// }]
+
+// database.ref('notes').set(notes)
+
+// database.ref('notes/12')
 
 //Setting up a data sub
 // database.ref().on('value', (snapshot) => {
