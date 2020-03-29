@@ -30,16 +30,12 @@ database.ref().set({
   console.log('This failed', e)
 })
 
-//database.ref().set('This is test data')
+database.ref('isSingle').set(null) //equivalent to remove
 
-// database.ref('age').set(36)
-// database.ref('location/city').set('Tekirdag')
-
-database.ref('attributes').set({
-  height: 187,
-  weight: 100
-}).then(() => {
-  console.log('Attributes added')
-}).catch(e => {
-  console.log('This failed', e)
-})
+// database.ref('isSingle')
+//   .remove()
+//   .then(() => {
+//     console.log('Data is removed')
+//   }).catch(e => {
+//     console.log('Remove failed', e)
+//   })
