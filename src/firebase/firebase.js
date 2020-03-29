@@ -16,10 +16,16 @@ firebase.analytics()
 
 const database = firebase.database()
 
+
 database.ref('expenses')
-  .on('child_removed', (snapshot) => {
+  .on('child_changed', (snapshot) => {
     console.log(snapshot.key, snapshot.val())
   })
+
+// database.ref('expenses')
+//   .on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+//   })
 
 
 // database.ref('expenses')
