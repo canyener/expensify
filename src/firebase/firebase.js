@@ -16,22 +16,26 @@ firebase.analytics()
 
 const database = firebase.database()
 
-// database.ref().set({
-//   name: 'Can Yener',
-//   age: 35,
-//   isSingle: true,
-//   location: {
-//     city: 'Istanbul',
-//     country: 'Turkey'
-//   }
-// }).then(() => {
-//   console.log('Data is saved')
-// }).catch(e => {
-//   console.log('This failed', e)
-// })
-
-database.ref('isSingle').remove().then(() => {
-  console.log('Data is removed')
+database.ref().set({
+  name: 'Can Yener',
+  age: 35,
+  isSingle: true,
+  location: {
+    city: 'Istanbul',
+    country: 'Turkey'
+  }
+}).then(() => {
+  console.log('Data is saved')
 }).catch(e => {
-  console.log('Remove failed', e)
+  console.log('This failed', e)
 })
+
+database.ref('isSingle').set(null) //equivalent to remove
+
+// database.ref('isSingle')
+//   .remove()
+//   .then(() => {
+//     console.log('Data is removed')
+//   }).catch(e => {
+//     console.log('Remove failed', e)
+//   })
