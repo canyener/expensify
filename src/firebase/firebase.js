@@ -17,8 +17,7 @@ firebase.analytics()
 const database = firebase.database()
 
 database.ref('expenses')
-  .once('value')
-  .then(snapshot => {
+  .on('value', (snapshot) => {
     const expenses = []
 
     snapshot.forEach(childSnapshot => {
@@ -30,6 +29,21 @@ database.ref('expenses')
 
     console.log(expenses)
   })
+
+// database.ref('expenses')
+//   .once('value')
+//   .then(snapshot => {
+//     const expenses = []
+
+//     snapshot.forEach(childSnapshot => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val()
+//       })
+//     })
+
+//     console.log(expenses)
+//   })
 
 // database.ref('expenses').push({
 //   description: 'Gum',
