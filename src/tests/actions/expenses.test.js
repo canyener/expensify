@@ -49,6 +49,7 @@ test('Should add expense to database and store', (done) => {
 
   store.dispatch(startAddExpense(expenseData)).then(() => {
     const actions = store.getActions()
+
     expect(actions[0]).toEqual({
       type: 'ADD_EXPENSE',
       expense: {
@@ -57,11 +58,10 @@ test('Should add expense to database and store', (done) => {
       }
     })
 
-    database.ref(`expenses/${actions[0].expense.id}`).once('value').then((snapshot) => {
-      
-      expect(snapshot.val()).toEqual(expenseData)
-      done()
-    })
+    return database.ref(`expenses/${actions[0].expense.id}`).once('value')
+  }).then((snapshot) => {
+    expect(snapshot.val()).toEqual(expenseData)
+    done()
   })
 })
 
