@@ -3,10 +3,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import DotEnv from 'dotenv'
 import 'jest-enzyme'
 
-DotEnv.config({ 
-  path: '.env.test' 
-})
+DotEnv.config({ path: '.env.test' })
 
-Enzyme.configure({
-  adapter: new Adapter()
-})
+Enzyme.configure({ adapter: new Adapter() })
