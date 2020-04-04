@@ -46,9 +46,9 @@ jobs:
       - run: yarn test
         env:
           CI: true
-          FIREBASE_API_KEY: AIzaSyCGoVp8V9bZaHe4ubmVE_rlmMES7lLA8Qg
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FIREBASE_AUTH_DOMAIN: expensify-tests-d63d9.firebaseapp.com
-          FIREBASE_DATABASE_URL: https://expensify-tests-d63d9.firebaseio.com
+          FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
           FIREBASE_PROJECT_ID: expensify-tests-d63d9
           FIREBASE_STORAGE_BUCKET: expensify-tests-d63d9.appspot.com
           FIREBASE_MESSAGING_SENDER_ID: 695968650062
