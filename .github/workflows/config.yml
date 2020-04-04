@@ -46,12 +46,12 @@ jobs:
       - run: yarn test
         env:
           CI: true
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-          FIREBASE_AUTH_DOMAIN: expensify-tests-d63d9.firebaseapp.com
-          FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
-          FIREBASE_PROJECT_ID: expensify-tests-d63d9
-          FIREBASE_STORAGE_BUCKET: expensify-tests-d63d9.appspot.com
-          FIREBASE_MESSAGING_SENDER_ID: 695968650062
-          FIREBASE_APP_ID: 1:695968650062:web:2c86b3a4f9a58f130b841f
-          FIREBASE_MEASUREMENT_ID: G-C3VCK9QMTK
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY_TESTS }}
+          FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN_TESTS }}
+          FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL_TESTS }}
+          FIREBASE_PROJECT_ID:  ${{ secrets.FIREBASE_PROJECT_ID_TESTS }}
+          FIREBASE_STORAGE_BUCKET:  ${{ secrets.FIREBASE_STORAGE_BUCKET_TESTS }}
+          FIREBASE_MESSAGING_SENDER_ID:  ${{ secrets.FIREBASE_MESSAGING_SENDER_ID_TESTS }}
+          FIREBASE_APP_ID:  ${{ secrets.FIREBASE_APP_ID_TESTS }}
+          FIREBASE_MEASUREMENT_ID:  ${{ secrets.FIREBASE_MEASUREMENT_ID_TESTS }}
 
