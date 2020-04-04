@@ -11,3 +11,9 @@ https://cancan-react-expensify-app.herokuapp.com/
 
 - For Redux, I use https://github.com/zalmoxisus/redux-devtools-extension
 
+## env files
+
+You can always check `.env.example` file to see all env variables you need.
+- Create env files in root directory or modify your scripts to run them properly.
+- Create `.env.test` file to setup env variables for tests.
+- Create `.env.development` file to setup env variables for development server and database.
