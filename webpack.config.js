@@ -3,8 +3,6 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-console.log(process.env.FIREBASE_DATABASE_URL)
-
 module.exports = (env) => {
   const isProduction = env === 'production'
   const CSSExtract = new MiniCssExtractPlugin({ filename: 'styles.css' })
