@@ -1,4 +1,5 @@
 ![CI](https://github.com/canyener/expensify/workflows/CI/badge.svg?branch=master)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/canyener/expensify?label=latest-release)
 
 # expensify
 A very common and simple React application to manage expenses to use more advanced features of React such as authentication, routing, testing and deploying.
