@@ -66,8 +66,9 @@ test('Should setup edit expense action object', () => {
   })
 })
 
-test('Should edit expenses in firebase', (done) => {
+test('Should edit expense from firebase', (done) => {
   const store = createMockStore({})
+
   const id = expenses[0].id
   const updates = {
     description: 'updated description',
@@ -78,6 +79,7 @@ test('Should edit expenses in firebase', (done) => {
 
   store.dispatch(startEditExpense(id, updates)).then(() => {
     const actions = store.getActions()
+
     expect(actions[0]).toEqual({
       type: 'EDIT_EXPENSE',
       id,
