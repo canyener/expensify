@@ -9,7 +9,12 @@ let startAddExpenseSpy, historySpy, wrapper
 beforeEach(() => {
   startAddExpenseSpy = jest.fn(),
   historySpy = { push: jest.fn() }
-  wrapper = shallow(<AddExpensePage startAddExpense={startAddExpenseSpy} history={historySpy} />)
+  wrapper = shallow(
+    <AddExpensePage 
+      startAddExpense={startAddExpenseSpy} 
+      history={historySpy} 
+    />
+  )
 })
 
 test('Should render AddExpensePage correctly', () => {
