@@ -11,9 +11,11 @@ import './styles/styles.scss'
 import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 
-import './firebase/firebase'
+import { firebase } from './firebase/firebase'
 
 const store = configureStore()
+
+firebase.analytics()
 
 const jsx = (
   <Provider store={store}>
