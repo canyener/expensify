@@ -35,7 +35,6 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",
-    "uuid": "^7.0.3",
     "webpack": "^4.42.1"
   },
   "devDependencies": {
