@@ -1,11 +1,7 @@
 import React from 'react'
 
-export default class LoginPage extends React.Component {
-  render() {
-    return (
-      <div>
-        <button>Login</button>
-      </div>
-    )
-  }
-}
+export const LoginPage = () => (
+  <div>
+    <button>Login</button>
+  </div>
+)
