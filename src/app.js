@@ -28,3 +28,11 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('root'))
 store.dispatch(startSetExpenses()).then(() => {
   ReactDOM.render(jsx, document.getElementById('root'))
 })
+
+firebase.auth().onAuthStateChanged((user) => {
+  if(user) {
+    console.log('log in')
+  } else {
+    console.log('log out')
+  }
+})
