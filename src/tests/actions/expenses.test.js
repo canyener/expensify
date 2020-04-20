@@ -27,6 +27,10 @@ beforeEach((done) => {
   database.ref('expenses').set(expensesData).then(() => done())
 })
 
+afterAll(() => {
+  database.goOffline()
+})
+
 test('Should setup remove expense action object', () => {
   const actualAction = removeExpense({ id: '123abc' })
   expect(actualAction).toEqual({
