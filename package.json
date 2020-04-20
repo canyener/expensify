@@ -11,6 +11,7 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest",
+    "coverage": "jest --coverage",
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
