@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Header correctly 1`] = `
+exports[`Header #Snapshots Should render Header correctly 1`] = `
 <header>
   <h1>
     Expensify

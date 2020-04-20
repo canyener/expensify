@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render ExpenseForm correctly with NO expense data 1`] = `
+exports[`ExpenseForm #Snapshots Should render ExpenseForm correctly with NO expense data 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -125,7 +125,7 @@ exports[`Should render ExpenseForm correctly with NO expense data 1`] = `
 </div>
 `;
 
-exports[`Should render ExpenseForm correctly with given expense data 1`] = `
+exports[`ExpenseForm #Snapshots Should render ExpenseForm correctly with given expense data 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -250,7 +250,7 @@ exports[`Should render ExpenseForm correctly with given expense data 1`] = `
 </div>
 `;
 
-exports[`Should render error message for invalid form submission 1`] = `
+exports[`ExpenseForm #Snapshots Should render error message for invalid form submission 1`] = `
 <div>
   <form
     onSubmit={[Function]}
@@ -375,7 +375,7 @@ exports[`Should render error message for invalid form submission 1`] = `
 </div>
 `;
 
-exports[`Should render error message for invalid form submission 2`] = `
+exports[`ExpenseForm #Snapshots Should render error message for invalid form submission 2`] = `
 <div>
   <p>
     Please provide description and amount.
