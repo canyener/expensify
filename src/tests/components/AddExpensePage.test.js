@@ -17,16 +17,25 @@ beforeEach(() => {
   )
 })
 
-test('Should render AddExpensePage correctly', () => {
-  expect(wrapper).toMatchSnapshot()
+describe('AddExpensePage', () => {
+  describe('#Snapshots', () => {
+    test('Should render AddExpensePage correctly', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+  })
+
+  describe('#Functionality', () => {
+    test('Should submit correct expense on onSubmit', () => {
+      wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1])
+      expect(startAddExpenseSpy).toHaveBeenLastCalledWith(expenses[1])
+    })
+    
+    test('Should redirect to / after submitting data', () => {
+      wrapper.find('ExpenseForm').prop('onSubmit')(expenses[0])
+      expect(historySpy.push).toHaveBeenLastCalledWith('/')
+    }) 
+  })
 })
 
-test('Should submit correct expense on onSubmit', () => {
-  wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1])
-  expect(startAddExpenseSpy).toHaveBeenLastCalledWith(expenses[1])
-})
 
-test('Should redirect to / after submitting data', () => {
-  wrapper.find('ExpenseForm').prop('onSubmit')(expenses[0])
-  expect(historySpy.push).toHaveBeenLastCalledWith('/')
-}) 
+
