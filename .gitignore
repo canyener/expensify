@@ -1,4 +1,6 @@
 node_modules
 public/dist
+coverage
 .env.development
 .env.test
+yarn-error.log
