@@ -3,8 +3,8 @@ import moment from 'moment'
 import filtersReducer from '../../reducers/filters'
 
 describe('filters reducer', () => {
-  describe('#Filtering', () => {
-    test('Should setup default filter values', () => {
+  describe('#Initialize', () => {
+    test('Should setup default state', () => {
       const state = filtersReducer(undefined, { type: '@@INIT' })
       expect(state).toEqual({
         text: '',
@@ -13,7 +13,8 @@ describe('filters reducer', () => {
         endDate: moment().endOf('month')
       })
     })
-
+  })
+  describe('#Filtering', () => {
     test('Should set text filter', () => {
       const text = 'test string'
       const action = { 
