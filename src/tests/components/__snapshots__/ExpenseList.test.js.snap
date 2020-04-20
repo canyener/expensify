@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render ExpenseList with empty expense array 1`] = `
+exports[`ExpenseList #Snapshots Should render ExpenseList with empty expense array 1`] = `
 <div>
   <p>
     No expenses
@@ -8,7 +8,7 @@ exports[`Should render ExpenseList with empty expense array 1`] = `
 </div>
 `;
 
-exports[`Should render ExpenseList with expenses 1`] = `
+exports[`ExpenseList #Snapshots Should render ExpenseList with expenses 1`] = `
 <div>
   <ExpenseListItem
     amount={195}
