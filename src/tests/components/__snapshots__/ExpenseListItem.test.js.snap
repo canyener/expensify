@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExpenseListFilters #Snapshots Should render ExpenseListItem with given expense 1`] = `
+exports[`ExpenseListItem #Snapshots Should render ExpenseListItem with given expense 1`] = `
 <div>
   <Link
     to="/edit/1"
