@@ -36,7 +36,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",
-    "webpack": "^4.42.1"
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
