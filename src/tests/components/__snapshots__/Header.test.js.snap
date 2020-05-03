@@ -19,6 +19,7 @@ exports[`Header #Snapshots Should render Header correctly 1`] = `
         </h1>
       </Link>
       <button
+        className="button button--link"
         onClick={[Function]}
       >
         Logout
