@@ -15,6 +15,7 @@ import expenses from '../fixtures/expenses'
 
 import database from '../../firebase/firebase'
 
+const uid = 'thisismytestuid'
 const createMockStore = configureMockStore([thunk])
 
 beforeEach((done) => {
@@ -24,7 +25,7 @@ beforeEach((done) => {
     expensesData[id] = { description, note, amount, createdAt }
   })
 
-  database.ref('expenses').set(expensesData).then(() => done())
+  database.ref(`users/${uid}/expenses`).set(expensesData).then(() => done())
 })
 
 afterAll(() => {
