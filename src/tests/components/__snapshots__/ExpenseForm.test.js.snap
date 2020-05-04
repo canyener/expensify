@@ -7,12 +7,14 @@ exports[`ExpenseForm #Snapshots Should render ExpenseForm correctly with NO expe
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value=""
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -114,6 +116,7 @@ exports[`ExpenseForm #Snapshots Should render ExpenseForm correctly with NO expe
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add a note for your expense (optional)"
       value=""
@@ -132,12 +135,14 @@ exports[`ExpenseForm #Snapshots Should render ExpenseForm correctly with given e
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value="Gum"
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -239,6 +244,7 @@ exports[`ExpenseForm #Snapshots Should render ExpenseForm correctly with given e
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add a note for your expense (optional)"
       value="Test note for gum"
@@ -257,12 +263,14 @@ exports[`ExpenseForm #Snapshots Should render error message for invalid form sub
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value=""
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -364,6 +372,7 @@ exports[`ExpenseForm #Snapshots Should render error message for invalid form sub
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add a note for your expense (optional)"
       value=""
@@ -385,12 +394,14 @@ exports[`ExpenseForm #Snapshots Should render error message for invalid form sub
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value=""
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -492,6 +503,7 @@ exports[`ExpenseForm #Snapshots Should render error message for invalid form sub
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add a note for your expense (optional)"
       value=""
