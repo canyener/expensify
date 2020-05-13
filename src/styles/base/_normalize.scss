@@ -102,24 +102,18 @@
  
  /* Links
     ========================================================================== */
- 
+
  /**
   * Remove the gray background color from active links in IE 10.
-  */
- 
- a {
-   background-color: transparent;
- }
- 
- /**
   * Improve readability of focused elements when they are also in an
   * active/hover state.
   */
  
  a {
+   background-color: transparent;
    &:active, &:hover {
      outline: 0;
-   };
+   }
  }
  
  /* Text-level semantics
@@ -363,7 +357,7 @@
  kbd,
  pre,
  samp {
-   font-family: monospace, monospace;
+   font-family: monospace;
    @if $legacy_browser_support {
      _font-family: 'courier new', monospace;
    }
