@@ -7,9 +7,9 @@ import expenses from '../fixtures/expenses'
 let startEditExpenseSpy, startRemoveExpenseSpy, historySpy, wrapper
 
 beforeEach(() => {
-  startEditExpenseSpy = jest.fn(),
-  startRemoveExpenseSpy = jest.fn(),
-  historySpy = { push: jest.fn() },
+  startEditExpenseSpy = jest.fn()
+  startRemoveExpenseSpy = jest.fn()
+  historySpy = { push: jest.fn() }
   wrapper = shallow(
     <EditExpensePage 
       startEditExpense={startEditExpenseSpy} 
