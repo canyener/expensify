@@ -13,10 +13,10 @@ let setTextFilterSpy,
     wrapper
 
 beforeEach(() => {
-  setTextFilterSpy = jest.fn(),
-  sortByDateSpy = jest.fn(),
-  sortByAmountSpy = jest.fn(),
-  setStartDateSpy = jest.fn(),
+  setTextFilterSpy = jest.fn()
+  sortByDateSpy = jest.fn()
+  sortByAmountSpy = jest.fn()
+  setStartDateSpy = jest.fn()
   setEndDateSpy = jest.fn()
   wrapper = shallow(
     <ExpenseListFilters
