@@ -1,4 +1,5 @@
 ![CI](https://github.com/canyener/expensify/workflows/CI/badge.svg?branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=canyener_expensify&metric=alert_status)](https://sonarcloud.io/dashboard?id=canyener_expensify)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/canyener/expensify?label=latest-release)
 ![David](https://img.shields.io/david/canyener/expensify)
 ![GitHub contributors](https://img.shields.io/github/contributors/canyener/expensify)
