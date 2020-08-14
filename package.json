@@ -23,7 +23,7 @@
     "core-js": "^3.6.5",
     "css-loader": "^4.2.1",
     "express": "^4.17.1",
-    "firebase": "^7.17.2",
+    "firebase": "^7.18.0",
     "history": "^5.0.0",
     "mini-css-extract-plugin": "^0.10.0",
     "moment": "^2.27.0",
