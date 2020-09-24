@@ -44,7 +44,7 @@
   "devDependencies": {
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.4",
+    "enzyme-adapter-react-16": "^1.15.5",
     "jest": "^26.4.2",
     "jest-enzyme": "^7.1.2",
     "react-test-renderer": "^16.13.1",
