@@ -26,7 +26,7 @@
     "firebase": "^7.22.1",
     "history": "^5.0.0",
     "mini-css-extract-plugin": "^0.11.3",
-    "moment": "^2.29.0",
+    "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "numeral": "^2.0.6",
     "raf": "^3.4.1",
