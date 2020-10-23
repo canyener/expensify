@@ -10,7 +10,7 @@
     "build:dev": "webpack --mode development",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest",
+    "test": "jest --runInBand",
     "coverage": "jest --coverage",
     "heroku-postbuild": "yarn run build:prod"
   },
