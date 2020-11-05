@@ -21,7 +21,7 @@
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.5",
-    "css-loader": "^5.0.0",
+    "css-loader": "^5.0.1",
     "express": "^4.17.1",
     "firebase": "^8.0.0",
     "history": "^5.0.0",
