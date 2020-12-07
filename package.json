@@ -39,7 +39,7 @@
     "redux-thunk": "^2.3.0",
     "regenerator-runtime": "^0.13.7",
     "sass-loader": "^10.1.0",
-    "webpack": "^5.9.0"
+    "webpack": "^5.10.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
