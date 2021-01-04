@@ -20,7 +20,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
-    "core-js": "^3.8.1",
+    "core-js": "^3.8.2",
     "css-loader": "^5.0.1",
     "express": "^4.17.1",
     "firebase": "^8.2.1",
